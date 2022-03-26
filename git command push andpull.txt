@@ -1,0 +1,108 @@
+Administrator@LAPTOP-NNJHKODR MINGW64 ~ (master)
+$ mkdir git_repo
+
+Administrator@LAPTOP-NNJHKODR MINGW64 ~ (master)
+$ cd git_repo
+
+Administrator@LAPTOP-NNJHKODR MINGW64 ~/git_repo (master)
+$ pwd
+/c/Users/Administrator/git_repo
+
+Administrator@LAPTOP-NNJHKODR MINGW64 ~/git_repo (master)
+$ mkdir changes
+
+Administrator@LAPTOP-NNJHKODR MINGW64 ~/git_repo (master)
+$ cd changes
+
+Administrator@LAPTOP-NNJHKODR MINGW64 ~/git_repo/changes (master)
+$ pwd
+/c/Users/Administrator/git_repo/changes
+
+Administrator@LAPTOP-NNJHKODR MINGW64 ~/git_repo/changes (master)
+$ git init
+Initialized empty Git repository in C:/Users/Administrator/git_repo/changes/.git/
+
+Administrator@LAPTOP-NNJHKODR MINGW64 ~/git_repo/changes (master)
+$ git pull https://github.com/GeethanjaliAnbalagan/Trial.git
+remote: Enumerating objects: 53, done.
+remote: Counting objects: 100% (53/53), done.
+remote: Compressing objects: 100% (38/38), done.
+remote: Total 53 (delta 27), reused 27 (delta 13), pack-reused 0
+Unpacking objects: 100% (53/53), 9.06 KiB | 25.00 KiB/s, done.
+From https://github.com/GeethanjaliAnbalagan/Trial
+ * branch            HEAD       -> FETCH_HEAD
+
+Administrator@LAPTOP-NNJHKODR MINGW64 ~/git_repo/changes (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   sam.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Administrator@LAPTOP-NNJHKODR MINGW64 ~/git_repo/changes (master)
+$ git add --all
+
+Administrator@LAPTOP-NNJHKODR MINGW64 ~/git_repo/changes (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   sam.txt
+
+
+Administrator@LAPTOP-NNJHKODR MINGW64 ~/git_repo/changes (master)
+$ git commit -m "changed"
+[master f4d1fc7] changed
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Administrator@LAPTOP-NNJHKODR MINGW64 ~/git_repo/changes (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Administrator@LAPTOP-NNJHKODR MINGW64 ~/git_repo/changes (master)
+$ git remote add origin https://github.com/GeethanjaliAnbalagan/Trial.git
+
+Administrator@LAPTOP-NNJHKODR MINGW64 ~/git_repo/changes (master)
+$ git remote -v
+origin  https://github.com/GeethanjaliAnbalagan/Trial.git (fetch)
+origin  https://github.com/GeethanjaliAnbalagan/Trial.git (push)
+
+Administrator@LAPTOP-NNJHKODR MINGW64 ~/git_repo/changes (master)
+$ git push -u origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 283 bytes | 94.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/GeethanjaliAnbalagan/Trial.git
+   410bf21..f4d1fc7  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+Administrator@LAPTOP-NNJHKODR MINGW64 ~/git_repo/changes (master)
+$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

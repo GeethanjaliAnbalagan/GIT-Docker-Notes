@@ -1,0 +1,25 @@
+git --version
+-----------------------------------------------------------------
+Configure Git
+git config --global user.name "Geethanjali Anbalagan"
+
+git config --global user.email "geethanjali30@gmail.com"
+-----------------------------------------------------------------------------
+Creating Git Folder
+
+mkdir myproject
+cd myproject
+
+initialize
+git init
+git status
+git add --all or  git add -A
+git commit -m "First release of hello"
+git status --short
+git commit -a -m "Update hello"
+git log
+git commit -help
+git help --all
+git show HEAD
+ git branch hello-world-img
+git checkout hello-world-img

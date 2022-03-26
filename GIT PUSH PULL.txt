@@ -1,0 +1,147 @@
+Administrator@LAPTOP-NNJHKODR MINGW64 ~ (master)
+$ mkdir sample_repo
+
+Administrator@LAPTOP-NNJHKODR MINGW64 ~ (master)
+$ cd sample_repo
+
+Administrator@LAPTOP-NNJHKODR MINGW64 ~/sample_repo (master)
+$ pwd
+/c/Users/Administrator/sample_repo
+
+Administrator@LAPTOP-NNJHKODR MINGW64 ~/sample_repo (master)
+$ mkdir changes
+
+Administrator@LAPTOP-NNJHKODR MINGW64 ~/sample_repo (master)
+$ cd changes
+
+Administrator@LAPTOP-NNJHKODR MINGW64 ~/sample_repo/changes (master)
+$ pwd
+/c/Users/Administrator/sample_repo/changes
+
+Administrator@LAPTOP-NNJHKODR MINGW64 ~/sample_repo/changes (master)
+$ git init
+Initialized empty Git repository in C:/Users/Administrator/sample_repo/changes/.git/
+
+Administrator@LAPTOP-NNJHKODR MINGW64 ~/sample_repo/changes (master)
+$ pwd
+/c/Users/Administrator/sample_repo/changes
+
+Administrator@LAPTOP-NNJHKODR MINGW64 ~/sample_repo/changes (master)
+$ git pull https://github.com/GeethanjaliAnbalagan/Trial.git
+remote: Enumerating objects: 56, done.
+remote: Counting objects: 100% (56/56), done.
+remote: Compressing objects: 100% (39/39), done.
+remote: Total 56 (delta 28), reused 31 (delta 14), pack-reused 0
+Unpacking objects: 100% (56/56), 9.29 KiB | 18.00 KiB/s, done.
+From https://github.com/GeethanjaliAnbalagan/Trial
+ * branch            HEAD       -> FETCH_HEAD
+
+Administrator@LAPTOP-NNJHKODR MINGW64 ~/sample_repo/changes (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Administrator@LAPTOP-NNJHKODR MINGW64 ~/sample_repo/changes (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   sam.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Administrator@LAPTOP-NNJHKODR MINGW64 ~/sample_repo/changes (master)
+$ git add --all
+
+Administrator@LAPTOP-NNJHKODR MINGW64 ~/sample_repo/changes (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   sam.txt
+
+
+Administrator@LAPTOP-NNJHKODR MINGW64 ~/sample_repo/changes (master)
+$ git commit -m "Finally changed"
+[master 83c417e] Finally changed
+ 1 file changed, 7 insertions(+)
+
+Administrator@LAPTOP-NNJHKODR MINGW64 ~/sample_repo/changes (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Administrator@LAPTOP-NNJHKODR MINGW64 ~/sample_repo/changes (master)
+$ git remote add origin https://github.com/GeethanjaliAnbalagan/Trial.git
+
+Administrator@LAPTOP-NNJHKODR MINGW64 ~/sample_repo/changes (master)
+$ git remote -v
+origin  https://github.com/GeethanjaliAnbalagan/Trial.git (fetch)
+origin  https://github.com/GeethanjaliAnbalagan/Trial.git (push)
+
+Administrator@LAPTOP-NNJHKODR MINGW64 ~/sample_repo/changes (master)
+$ git push -u origin master
+To https://github.com/GeethanjaliAnbalagan/Trial.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/GeethanjaliAnbalagan/Trial.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Administrator@LAPTOP-NNJHKODR MINGW64 ~/sample_repo/changes (master)
+$ git remote -v
+origin  https://github.com/GeethanjaliAnbalagan/Trial.git (fetch)
+origin  https://github.com/GeethanjaliAnbalagan/Trial.git (push)
+
+Administrator@LAPTOP-NNJHKODR MINGW64 ~/sample_repo/changes (master)
+$ git push -u origin master
+To https://github.com/GeethanjaliAnbalagan/Trial.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/GeethanjaliAnbalagan/Trial.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Administrator@LAPTOP-NNJHKODR MINGW64 ~/sample_repo/changes (master)
+$ git pull https://github.com/GeethanjaliAnbalagan/Trial.git
+remote: Enumerating objects: 8, done.
+remote: Counting objects: 100% (8/8), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 6 (delta 2), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (6/6), 1.31 KiB | 17.00 KiB/s, done.
+From https://github.com/GeethanjaliAnbalagan/Trial
+ * branch            HEAD       -> FETCH_HEAD
+Auto-merging sam.txt
+CONFLICT (content): Merge conflict in sam.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+Administrator@LAPTOP-NNJHKODR MINGW64 ~/sample_repo/changes (master|MERGING)
+$ git push -u origin master
+To https://github.com/GeethanjaliAnbalagan/Trial.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/GeethanjaliAnbalagan/Trial.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Administrator@LAPTOP-NNJHKODR MINGW64 ~/sample_repo/changes (master|MERGING)
+$ git push origin master --force
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 316 bytes | 158.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/GeethanjaliAnbalagan/Trial.git
+ + b8c930e...83c417e master -> master (forced update)
+
+Administrator@LAPTOP-NNJHKODR MINGW64 ~/sample_repo/changes (master|MERGING)
+$
+
